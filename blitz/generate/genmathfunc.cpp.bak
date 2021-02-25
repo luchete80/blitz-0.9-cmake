@@ -144,7 +144,7 @@ void one(const char* applicName, const char* specialization, const char* funcNam
     {
         ofs << std::endl << "    static inline T_numtype apply(T_numtype1 x)"
             << std::endl << "    {" << std::endl;
-        ofs << "#if defined (isnan)" << std::endl;
+        ofs << "#ifdef (isnan)" << std::endl;
         ofs << "        "
             << "// Some platforms define isnan as a macro, which causes the"
             << std::endl << "        "
